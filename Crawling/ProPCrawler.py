@@ -9,10 +9,9 @@ searchUrl = "search?c_code%5Bid%5D=3&ntee%5Bid%5D=&page=%d&q=&state%5Bid%5D=MD"
 
 def main():
 	# Get ID and name info all 501(c)3 orgs
-	for i in range(122,146):
+	for i in range(1,146):
 		table = getPageOrgs(i)
 		saveTable(table=table, pageNum=i)
-
 
 	# Fill in data of each Organization
 
@@ -46,6 +45,7 @@ def getPageOrgs( pageNum ):
 		orgTable.append([ein, name, city, state])
 	return orgTable
 
+# Save the table to the appropriate directory
 def saveTable( pageNum, table, filePath='./Charities_MD/' ):
 	fileName = 'charities_%03d' % pageNum
 	with open(filePath+fileName+'.csv', 'w') as myfile:
