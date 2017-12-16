@@ -1,2 +1,0 @@
-# CMSC320
-Projects for CMSC320 Fa2017 at UMD
