@@ -1,7 +1,7 @@
 import csv
 
 cols = ['EIN', 'totrevnue', 'totexpns']
-with open('16eofinextractez.dat', 'r') as datfile:        
+with open('../Datasets/Charities/Raw/16eofinextractez.dat', 'r') as datfile:        
     table = []
     table.append(cols)
     line = datfile.readline()
@@ -15,6 +15,6 @@ with open('16eofinextractez.dat', 'r') as datfile:
         newLine = [feed[locEin], feed[locTR], feed[locTE]]
         table.append(newLine)
 
-with open('990Files2016.csv', 'w') as csvfile:
+with open('../Datasets/Charities/990Files2016.csv', 'w') as csvfile:
 	writer = csv.writer(csvfile)
 	[writer.writerow(r) for r in table]

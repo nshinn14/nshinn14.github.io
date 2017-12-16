@@ -46,7 +46,7 @@ def getPageOrgs( pageNum ):
 	return orgTable
 
 # Save the table to the appropriate directory
-def saveTable( pageNum, table, filePath='./Charities_MD/' ):
+def saveTable( pageNum, table, filePath='../Datasets/Charities/Charities_MD/' ):
 	fileName = 'charities_%03d' % pageNum
 	with open(filePath+fileName+'.csv', 'w') as myfile:
 	    #configure writer to write standard csv file
